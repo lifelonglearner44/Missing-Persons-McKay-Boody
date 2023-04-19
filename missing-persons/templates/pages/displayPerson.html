@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+<div class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+            <!-- TABLE DATA -->
+                <p style = "text-align: center; font-size: 50px"><strong>Details on individual:</strong></p>
+                <form>
+                    <label style="font-weight: bold">Date Missing: </label>
+                    <label>{{data.date_missing}}</label>
+                    <br><br>
+                    <label style="font-weight: bold">Full Name: </label>
+                    <label>{{data.first_name}} {{data.last_name}}</label>  
+                    <br><br>
+                    <label style="font-weight: bold">Age Missing: </label>
+                    <label>{{data.age_missing}}</label>  
+                    <br><br>
+                    <label style="font-weight: bold">City: </label>
+                    <label>{{data.city}}</label>
+                    <br>  <br>        
+                    <label style="font-weight: bold">State: </label>
+                    <label>{{data.state}}</label>
+                    <br>  <br> 
+                    <label style="font-weight: bold">Gender: </label>
+                    <label>{{data.gender}}</label>
+                    <br> <br>   
+                    <label style="font-weight: bold">Race: </label>
+                    <label>{{data.race}}</label>
+                    <br><br>
+                </form>    
+                <br>
+                <a class="btn btn-primary btn-lg" href="{% url 'showPeople' %}">Back</a>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>   
+{% endblock %}
